@@ -1,11 +1,19 @@
-import http.server
-import socketserver
+import web
 import json
 
-class MyHandler(http.server.BaseHTTPRequestHandler):
-    def do_POST(self):
-        self.send_response(200)
-        self.end_headers()
+urls = ('/.*', 'hooks')
 
-with socketserver.TCPServer(("", 80), MyHandler) as httpd:
-    httpd.serve_forever()
+app = web.application(urls, globals())
+
+class hooks:
+    def POST(self):
+        data = web.data()
+        data_json = json.loads(data, strict=False)
+        print(data_json)
+        content = data_json["content"]
+        if 'http' in content:
+            print('content detected.')
+        return 'OK'
+
+if __name__ == '__main__':
+    app.run()
