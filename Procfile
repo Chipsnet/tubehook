@@ -1,1 +1,1 @@
-web: pipenv run start
+web: python main.py 80
