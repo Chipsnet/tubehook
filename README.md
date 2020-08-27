@@ -1,6 +1,6 @@
-# Tubehook
+# detect-stream-tweet
 
-YouTubeのURLを含むTwitter投稿をフックしてDiscord Webhookするためのアプリケーションです。
+YouTubeのURLと告知などのキーワードを含むTwitter投稿をフックしてDiscord Webhookするためのアプリケーションです。
 
 ## How to use
 
