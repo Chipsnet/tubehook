@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-"web.py" = "==0.61"
+"web.py" = "==0.62"
 tweepy = "*"
 
 [requires]
